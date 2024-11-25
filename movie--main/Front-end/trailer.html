@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <link rel="Website - Icon" type="png" href="img/logo-web.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Trailer | Hành Trình Django - Django Unchained</title>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a class="logo" href="/index.html">
+                    <img src="img/logo-web.svg" alt="">
+                    <span>Movies Chill</span>
+                </a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active"><a href="/index.html">Home</a></li>
+                    <li class="menu-list-item"><a href="#">Movies</a></li>
+                    <li class="menu-list-item"><a href="#">Series</a></li>
+                    <li class="menu-list-item"><a href="#">Popular</a></li>
+                    <li class="menu-list-item"><a href="#">Trends</a></li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <a href="/index.html"><i class="left-menu-icon fas fa-home"></i></a>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+    </div>
+    <div class="overlay" style="display: none;"></div>
+    <div class="search-overlay" style="display: none;">
+        <input type="text" class="search-input" placeholder="Nhập nội dung tìm kiếm...">
+        <div class="search-results"></div>
+    </div>
+    <div class="container container-trailer">
+        <div class="content-container content-trailer-container">
+            <div class="container-trailer-movies">
+                <div class="content-trailer-movie">
+                    <div class="overlay-trailer"></div>
+                    <video id="myVideo" width="100%" max-width="100%" controls>
+                        <source src="/trailer/trailer DJANGO.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="text-trailer">
+                    <h2>Hành Trình Django - Django Unchained</h2>
+                    <div class="category">
+                        <div class="background-category">
+                            <span>t18</span>
+                        </div>
+                        <div class="background-category">
+                            <span>phim âu mỹ</span>
+                        </div>
+                        <div class="background-category">
+                            <span>hành động&phiêu lưu</span>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <div class="span">
+                            <span>Hành Trình Django - Django Unchained kể về một nô lệ da đen được trả tự do tên
+                                là
+                                Django cùng một thợ săn tiền thưởng đi dọc nước Mỹ để tìm và giải cứu vợ của anh
+                                khỏi
+                                Candie - một chủ đồn điền độc ác.</span>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <span>Diễn viên:
+                            Samuel L. Jackson, Jamie Foxx, Kerry Washington, Christoph Waltz, EMMA ,Leonardo
+                            DiCaprio.</span>
+                    </div>
+                    <div>
+                        <span class="director"> Đạo diễn:
+                            Quentin Tarantino</span>
+                    </div>
+                    <div>
+                        <span class="nation"> Quốc gia:
+                            United States of America</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

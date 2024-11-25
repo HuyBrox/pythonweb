@@ -1,0 +1,958 @@
+<html lang="en">
+
+<head>
+  <link rel="Website - Icon" type="svg" href="img/logo-web.svg" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <title>Movies Chill</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+        <a class="logo" href="">
+          <img src="img/logo-web.svg" alt="" />
+          <span>Movies Chill</span>
+        </a>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-list">
+          <li class="menu-list-item active">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="menu-list-item"><a href="#">Movies</a></li>
+          <li class="menu-list-item"><a href="#">Series</a></li>
+          <li class="menu-list-item"><a href="#">Popular</a></li>
+          <li class="menu-list-item"><a href="#">Trends</a></li>
+        </ul>
+      </div>
+      <div class="profile-container">
+        <div class="toggle">
+          <i class="fas fa-sun toggle-icon"></i>
+          <i class="fas fa-moon toggle-icon"></i>
+          <div class="toggle-ball"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <i class="left-menu-icon search fas fa-search"></i>
+    <a href="/index.html"><i class="left-menu-icon fas fa-home active"></i></a>
+    <i class="left-menu-icon fas fa-users"></i>
+    <i class="left-menu-icon fas fa-bookmark"></i>
+    <i class="left-menu-icon fas fa-tv"></i>
+    <i class="left-menu-icon fas fa-hourglass-start"></i>
+    <i class="left-menu-icon fas fa-shopping-cart"></i>
+  </div>
+  <div class="overlay" style="display: none"></div>
+  <div class="search-overlay" style="display: none">
+    <input type="text" class="search-input" placeholder="Nhập nội dung tìm kiếm..." />
+    <div class="search-results"></div>
+  </div>
+
+  <div class="container">
+    <div class="content-container">
+      <div class="featured-content">
+        <!-- phần trên -->
+        <img class="featured-title" src="img/f-t-1.png" alt="" />
+        <p class="featured-desc">
+          Hành Trình Django - Django Unchained kể về một nô lệ da đen được trả
+          tự do tên là Django cùng một thợ săn tiền thưởng đi dọc nước Mỹ để
+          tìm và giải cứu vợ của anh khỏi Candie - một chủ đồn điền
+        </p>
+        <div class="btn">
+          <a href="#"><button class="custom-btn btn-5 featured-button" data-index="0">
+              <ion-icon class="play-video" name="play-circle-outline"></ion-icon>
+              <span>WATCH</span>
+            </button>
+          </a>
+          <!-- <a href="trailer.html"><button
+                            class="custom-btn btn-5 trailer-button"><span>TRAILER</span></button></a> -->
+        </div>
+      </div>
+      <div class="movie-list-container">
+        <div class="alo">
+          <h1 class="movie-list-title">NEW RELEASES</h1>
+          <a href="#">
+            <h1 class="see-it-all">
+              Xem Tất Cả <ion-icon name="chevron-forward-outline"></ion-icon>
+            </h1>
+          </a>
+        </div>
+        <div class="movie-list-wrapper" id="parent-element">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/1.jpeg" alt="" />
+              <span class="movie-list-item-title"> Nàng – Her </span>
+              <p class="movie-list-item-desc">
+                Her là một bộ phim khoa học viễn tưởng xen lẫn lãng mạn và hài
+                chính kịch do Hoa Kỳ sản xuất.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="1">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/2.jpeg" alt="" />
+              <span class="movie-list-item-title">Star Wars</span>
+              <p class="movie-list-item-desc">
+                Chiến tranh giữa các vì sao diễn ra trong một thiên hà giả
+                tưởng do mỹ sản xuất.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="2">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/3.jpg" alt="" />
+              <span class="movie-list-item-title">Đội Bóng Trong Mơ</span>
+              <p class="movie-list-item-desc">
+                Đây là một bộ phim hiếm hoi của Hàn Quốc lấy chủ đề về thể
+                thao.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="3">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/4.jpg" alt="" />
+              <span class="movie-list-item-title">1917</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="4">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button" data-index="4">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/5.jpg" alt="" />
+              <span class="movie-list-item-title">Avengers</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="5">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/6.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="6">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/7.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="7">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/20.jpg" alt="" />
+              <span class="movie-list-item-title">Ác Quỷ - Revenant</span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="8">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="9">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/20.jpg" alt="" />
+              <span class="movie-list-item-title">Ác Quỷ - Revenant</span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="10">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="11">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="https://ntvb.tmsimg.com/assets/p33157_v_h10_au.jpg?w=1280&h=720" alt="" />
+              <span class="movie-list-item-title">Ác Quỷ - Revenant</span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="12">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="13">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/20.jpg" alt="" />
+              <span class="movie-list-item-title">Ác Quỷ - Revenant</span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="14">
+                <span>Watch</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="15">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="16">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="17">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="18">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="19">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/21.jpg" alt="" />
+              <span class="movie-list-item-title">Quý Công Tử<span style="font-size: 12px">The Childe (2023)</span></span>
+              <p class="movie-list-item-desc">
+                Ác Quỷ (Revenant) là một bộ phim truyền hình Hàn Quốc thuộc
+                thể loại kinh dị và bí ẩn, do đạo diễn Lee Jung Rim đảm nhận.
+                Bộ phim mang đến sự kết hợp giữa yếu tố siêu nhiên, kinh dị và
+                căng thẳng, cùng với một cốt truyện xoay quanh việc mở ra một
+                thế giới khác đầy những linh hồn ma quỷ. Trong phim, các diễn
+                viên như Kim Tae Ri, Oh Jung Se, Hong Kyung,... thể hiện vai
+                trò quan trọng trong diễn xuất..
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="20">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <div class="movie-list-container" id="parent-element">
+        <div class="alo">
+          <h1 class="movie-list-title">NEW RELEASES</h1>
+          <a href="#">
+            <h1 class="see-it-all">
+              Xem Tất Cả <ion-icon name="chevron-forward-outline"></ion-icon>
+            </h1>
+          </a>
+        </div>
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/8.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="21">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/9.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="22">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/10.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="23">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/11.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="24">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/12.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="25">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/12.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="26">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/13.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="27">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/3.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="28">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/4.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="29">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/20.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="30">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/7.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="31">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/4.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="32">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/6.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="33">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/5.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="34">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/4.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="35">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/3.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="36">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/2.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="37">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <!-- phần dưới -->
+      <div class="featured-content featured-content-bottom" style="
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515),
+              url('img/f-2.jpg');
+          ">
+        <img class="featured-title" src="img/f-t-2.png" alt="" />
+        <p class="featured-desc">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo
+          dolor deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat
+          quo enim impedit, laboriosam omnis minima voluptatibus incidunt.
+          Accusamus, provident.
+        </p>
+        <div class="btn">
+          <a href="#"><button class="custom-btn btn-5 featured-button" data-index="38">
+              <ion-icon class="play-video" name="play-circle-outline"></ion-icon>
+              <span>WATCH</span>
+            </button>
+          </a>
+          <!-- <a href="trailer.html"><button
+                            class="custom-btn btn-5 trailer-button"><span>TRAILER</span></button></a> -->
+        </div>
+      </div>
+      <div class="movie-list-container">
+        <div class="alo">
+          <h1 class="movie-list-title">NEW RELEASES</h1>
+          <a href="#">
+            <h1 class="see-it-all">
+              Xem Tất Cả <ion-icon name="chevron-forward-outline"></ion-icon>
+            </h1>
+          </a>
+        </div>
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/1.jpeg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="39">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/2.jpeg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="40">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/15.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="41">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/3.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="42">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/4.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="43">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/5.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="44">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/1.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="45">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <div class="movie-list-container">
+        <div class="alo">
+          <h1 class="movie-list-title">NEW RELEASES</h1>
+          <a href="#">
+            <h1 class="see-it-all">
+              Xem Tất Cả <ion-icon name="chevron-forward-outline"></ion-icon>
+            </h1>
+          </a>
+        </div>
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/17.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="46">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/18.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="47">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/19.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="48">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/7.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="49">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/5.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="50">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/9.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="51">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+            <div class="movie-list-item">
+              <img class="movie-list-item-img" src="img/10.jpg" alt="" />
+              <span class="movie-list-item-title">Her</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                hic fugit similique accusantium.
+              </p>
+              <button class="custom-btn btn-5 movie-list-item-button" data-index="52">
+                <span>Watch</span>
+              </button>
+              <button class="custom-btn btn-5 trailer-movie-button">
+                <span>Trailer</span>
+              </button>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <div class="overlay-movies">
+        <div class="container-movies">
+          <div class="content-movies">
+            alo
+            <div class="movies">
+              <div id="movieTitle"></div>
+              <div id="movieDescription"></div>
+              <div id="movieGenre"></div>
+              <div id="movieTime"></div>
+              <div id="movieYear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/data-movies.js"></script>
+</body>
+
+</html>
